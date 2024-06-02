@@ -1,0 +1,274 @@
+/* Globale Stile */
+:root {
+  --main-color: #cccccc;
+  --font-color: rgb(255, 255, 255);
+  --sidebar-color: #7e6767;
+  --gold-font: #d3d3d3;
+  --article-color: #585858;
+  --progress-bar-color: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--font-color);
+  background-color: #535250;
+}
+
+header {
+  padding: 00px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3rem;
+  color: var(--font-color);
+  background-color: var(--sidebar-color);
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: var(--sidebar-color);
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.sidebar ul li {
+  padding: 15px 25px; /* Erhöhe die Polsterung für größere Schaltflächen */
+  background-color: var(--main-color);
+  color: var(--font-color);
+  border-radius: 10px; /* Weniger abgerundete Ecken */
+  font-size: 1.2rem; /* Größere Schriftgröße */
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease; /* Hinzufügen einer Übergangswirkung für die Transformation */
+  border: 2px solid var(--main-color); /* Hinzufügen eines Randes */
+}
+
+.sidebar ul li:hover {
+  background-color: var(--font-color); 
+  color: var(--main-color); 
+  transform: scale(1.05); 
+  border-color: var(--font-color); 
+}
+
+main {
+  flex: 2;
+  display: flow-root;
+  justify-content: center;
+  align-items: center;
+  padding: 110px;
+  background-image: url('https://miro.medium.com/v2/resize:fit:1280/0*dy4moFCDSQXWaMF6.gif'); 
+  background-size: 100%; 
+  background-position: center; 
+}
+
+
+.start {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.start h1 {
+  color: #4174d1; /* Beibehaltung der bestehenden Farbe */
+  font-size: 1.5rem; /* Erhöhung der Schriftgröße */
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Hinzufügen eines leichten Schattens */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Ändern der Schriftart */
+  text-align: center; 
+  transform: translateX(40%);
+  transform: translateY(00%);
+}
+
+#startbtn {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+  color: var(--font-color);
+  background-color: var(--article-color);
+  transition: background 0.3s ease;
+  transform: translateX(20%);
+  transform: translateX(00%);
+}
+
+#startbtn:hover {
+  background-color: var(--gold-font);
+  color: var(--main-color);
+}
+
+.qusetions {
+  background-color: var(--article-color);
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.qusetions fieldset h2 {
+  padding: 10px;
+  background-color: var(--gold-font);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.qusetions fieldset ul li {
+  padding: 10px;
+  background-color: var(--main-color);
+  border: 1px solid var(--gold-font);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+  list-style: none; 
+}
+
+.qusetions fieldset ul li:hover {
+  background-color: var(--gold-font);
+  color: var(--main-color);
+}
+
+.qusetions fieldset ul li.selected {
+  background-color: var(--gold-font);
+  color: var(--main-color);
+}
+
+
+#nextbtn{
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+  color: var(--font-color);
+  background-color: var(--sidebar-color);
+  transition: background 0.3s ease;
+  transform: translateX(20%);
+}
+
+.active {
+  background-color: var(--progress-bar-color);
+  color: var(--font-color);
+}
+
+.results {
+  width: 15%;
+  background-color: var(--article-color);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 30px solid var(--sidebar-color);
+}
+
+.progress {
+  padding: 10px;
+  text-align: center;
+  background-color: var(--sidebar-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.score {
+  padding: 10px;
+  background-color: var(--gold-font);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+footer {
+  background-color: var(--sidebar-color);
+  color: var(--gold-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  font-size: 3rem;
+  min-height: 60px;
+}
+
+#category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Buttons gleichmäßig verteilen */
+  align-items: center; /* Zentrieren vertikal */
+  margin-bottom: 20px;
+}
+
+#category-buttons ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+#category-buttons li {
+  margin-bottom: 10px; /* Abstand zwischen den Listenelementen */
+  display: flex;
+}
+
+
+
+#resetButton {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 20px;
+  color: var(--font-color);
+  background-color: var(--sidebar-color);
+  transition: background 0.3s ease;
+  transform: translateX(20%);
+
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+  #category-buttons {
+    flex-direction: column; /* Bei kleineren Bildschirmen vertikal anordnen */
+    align-items: flex-start; /* Links ausrichten */
+    display: flex;
+  }
+}
+
+@media all and (max-width: 40em) {
+  main {
+    flex-direction: column;
+  }
+}
+
+main > * {
+  order: 0;
+}
